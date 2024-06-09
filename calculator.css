@@ -1,0 +1,106 @@
+/* Apply a more professional look to the calculator */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ececec;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #303c46;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+.display {
+    grid-column: span 4;
+    height: 70px;
+    background-color: #333;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    font-size: 2.5em;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    height: 60px;
+    border: 0;
+    width: 100px;
+    outline: 0;
+    border-radius: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #ececec;
+    background: transparent;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.equal {
+    height: 60px;
+    outline: 0;
+    width: 350px;
+    border-radius: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #ececec;
+    background: transparent;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.equal:active {
+    background-color: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+.button:active {
+    background-color: #e0e0e0;
+    transform: translateY(2px);
+}
+
+.operator {
+    background-color: #ff9500;
+    color: #ffffff;
+}
+
+.operator:active {
+    background-color: #e08900;
+}
+
+#equals {
+    grid-column: span 3;
+    background-color: #007AFF;
+    color: #ffffff;
+}
+
+#equals:active {
+    background-color: #005BBB;
+}
+
+#clear {
+    background-color: #ff3b30;
+    color: #ffffff;
+}
+
+#clear:active {
+    background-color: #e02d20;
+}
+
+/* Adjust the font and alignment for better aesthetics */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
